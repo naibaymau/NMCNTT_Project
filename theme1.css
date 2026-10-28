@@ -1,0 +1,291 @@
+:root {
+  --bg: #f2f6f3;
+  --card: #fff;
+  --ink: #16302a;
+  --mute: #5d7069;
+  --line: #d5dfd9;
+  --tea: #1d4a3e;
+  --tea2: #2c6a58;
+  --gold: #c98a14;
+  --err: #b3261e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101a17;
+    --card: #17251f;
+    --ink: #e6efe9;
+    --mute: #9db1a8;
+    --line: #2a3d35;
+    --tea: #4fa88e;
+    --tea2: #6cc2a8;
+    --gold: #e3a53a;
+    --err: #ff8a80;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 15px/1.55 'Be Vietnam Pro', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+h1, h2, h3 {
+  font-family: Lora, Georgia, serif;
+  margin: 0 0 .5em;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--tea);
+  color: #fff;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font: 700 20px Lora, serif;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+header button {
+  background: none;
+  border: 0;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+
+header button:hover,
+header button.on {
+  background: rgba(255, 255, 255, .18);
+}
+
+main {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.btn {
+  background: var(--tea);
+  color: #fff;
+  border: 0;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: 500 14px inherit;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: var(--tea2);
+}
+
+.btn.alt {
+  background: none;
+  color: var(--tea);
+  border: 1px solid var(--tea);
+}
+
+.btn.sm {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+input, select, textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--ink);
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: 500;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.hero {
+  background: var(--tea);
+  color: #fff;
+  border-radius: 14px;
+  padding: 44px 32px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  max-width: 520px;
+}
+
+.hero p {
+  max-width: 460px;
+  opacity: .9;
+}
+
+.hero .btn {
+  background: var(--gold);
+  color: #1a1205;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.pimg {
+  height: 120px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--tea);
+}
+
+.mute {
+  color: var(--mute);
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sp {
+  justify-content: space-between;
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heart {
+  background: none;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--mute);
+}
+
+.heart.on {
+  color: var(--err);
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 720px) {
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.wrap {
+  overflow-x: auto;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: var(--bg);
+  padding: 10px 18px;
+  border-radius: 8px;
+  z-index: 9;
+}
+
+.badge {
+  background: var(--gold);
+  color: #1a1205;
+  border-radius: 99px;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.star {
+  color: var(--gold);
+}
+
+.note {
+  background: var(--card);
+  border-left: 4px solid var(--gold);
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: var(--mute);
+  padding: 20px;
+}
