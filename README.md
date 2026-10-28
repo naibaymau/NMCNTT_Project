@@ -7,7 +7,6 @@
 ### Main Features
 #### Core
 - Home 
-- Sign in / Sign up
 - Product list
 - Product description
 - Cart 
@@ -30,6 +29,7 @@
 - 26120482 | Ha Van Vuong
 - 26120335 | Ngo Gia Phuc
 - 26120395 | Le Quoc Thinh
+- 26120xxx | xxx
 
 ## 4. Progress Update
 ### V1 (dd:mm:yyyy)
