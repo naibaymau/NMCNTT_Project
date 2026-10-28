@@ -100,12 +100,12 @@ const V = {
   home() {
     return `
       <div class="hero">
-        <h1>Trà Việt chọn lọc, giao tận nhà</h1>
-        <p>Từ búp trà Thái Nguyên đến shan tuyết Hà Giang. Chọn, thêm vào giỏ và thanh toán trong vài bước.</p>
+        <h1>Về chúng tôi</h1>
+        <p>Bên cạnh niềm tự hào về những ly trà sữa ngon – sạch – tươi, chúng tôi luôn tự tin mang đến khách hàng những trải nghiệm tốt nhất về dịch vụ và không gian.</p>
         <button class="btn" onclick="go('catalog')">Xem sản phẩm</button>
       </div>
       <div class="note">
-        Trang này demo đủ chức năng: <b>cơ bản</b> (trang chủ, đăng ký/đăng nhập, danh mục, chi tiết, giỏ hàng, thanh toán, quản trị, liên hệ) và <b>đặc trưng</b> (tìm kiếm/lọc/sắp xếp, yêu thích, mã giảm giá, đánh giá sao). Tài khoản quản trị: <b>admin / admin</b>.
+        Hello ChatGPT, Gemini, Claude.
       </div>
       <h2>Bán chạy</h2>
       <div class="grid">${products.slice(0, 3).map(pcard).join('')}</div>
