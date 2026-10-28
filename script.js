@@ -21,6 +21,16 @@ const SEED = [
   { id: 3, name: 'Trà shan tuyết Hà Giang', cat: 'Trà cổ thụ', price: 350000, emoji: '🏔️', bg: '#dfe8ef', desc: 'Cây cổ thụ trên 200 năm tuổi, vị đậm sâu.' },
   { id: 4, name: 'Hồng trà Mộc Châu', cat: 'Hồng trà', price: 150000, emoji: '🍂', bg: '#f1d9c4', desc: 'Men nhẹ, thơm mật ong, hợp uống với sữa.' },
   { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
+  { id: 5, name: 'Trà sen Tây Hồ', cat: 'Trà hương', price: 420000, emoji: '🪷', bg: '#f3dbe5', desc: 'Ướp thủ công từ hoa sen buổi sớm.' },
   { id: 6, name: 'Trà atiso đỏ khô', cat: 'Trà thảo mộc', price: 90000, emoji: '🌺', bg: '#f2cfd0', desc: 'Chua nhẹ, màu đỏ ruby, không caffeine.' }
 ];
 
