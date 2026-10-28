@@ -30,7 +30,13 @@
 - 26120482 | Ha Van Vuong
 
 ## 4. Progress Update
-- V1 (dd:mm:yyyy)
+### V1 (dd:mm:yyyy)
+#### Project1
+-
+-
+#### Project2
+-
+-
 
 ## 5. References
 
