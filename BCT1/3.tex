@@ -31,8 +31,13 @@
 \usepackage{url}
 \usepackage{tocloft}
 \usepackage{titlesec}
+% [SỬA] Đã xóa các dòng nạp lặp: array, geometry
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
 \usepackage[labelsep=colon,font=bf,justification=centering,skip=6pt]{caption}
 \usepackage[hidelinks]{hyperref}
+% [SỬA] Đã xóa \geometry{margin=2.5cm} vì nó ghi đè lề 3/2.5/3/2 ở trên
 
 \numberwithin{equation}{chapter}
 \setcounter{secnumdepth}{3}
@@ -97,6 +102,10 @@
 % Chương không đánh số, không vào mục lục
 \newcommand{\chuongkhongmucluc}[1]{\clearpage\phantomsection\chapter*{#1}}
 
+% [SỬA] Thêm kiểu cột C và L cho bảng phân công (bản cũ bị thiếu -> lỗi biên dịch)
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 \begin{document}
 
 %========================================================================
@@ -116,9 +125,9 @@ NGÔ GIA PHÚC -- 26120335\\[4pt]
 LÊ QUỐC THỊNH -- 26120395}\\[2cm]
 {\Large BÁO CÁO TIẾN ĐỘ 1\\[8pt]
 XÁC ĐỊNH CHỨC NĂNG WEBSITE BÁN HÀNG \\[4pt]
-TÊN TRANG WEB | GPTea Coffe Shop}\\[2.5cm]
+TÊN TRANG WEB | GPTea Coffee Shop}\\[2.5cm]  % [SỬA] Coffe -> Coffee
 \vfill
-{\large Tp. Hồ Chí Minh, 4 tháng 11/2026}
+{\large Tp. Hồ Chí Minh, ngày 4 tháng 11 năm 2026}  % [SỬA] định dạng ngày
 \end{titlepage}
 
 %========================================================================
@@ -186,11 +195,12 @@ TÊN TRANG WEB | GPTea Coffe Shop}\\[2.5cm]
 \section{Giới thiệu tất cả chức năng của hệ thống}
 CHỨC NĂNG CƠ BẢN:
 \begin{itemize}[leftmargin=2.2cm]
-\item Trang chủ
+\item Trang chủ (Đăng kí, Đăng nhập)
 \item Giỏ hàng
 \item Danh mục sản phẩm
 \item Chi tiết sản phẩm
 \item Thanh toán
+\item Chức năng tìm kiếm
 \end{itemize}
 CHỨC NĂNG ĐẶC TRƯNG:
 \begin{itemize}[leftmargin=2.2cm]
@@ -199,19 +209,109 @@ CHỨC NĂNG ĐẶC TRƯNG:
 \item Tinh chỉnh sản phẩm
 \end{itemize}
 \section{Chức năng cơ bản}
-\subsection{Trang chủ}
-\subsection{Giỏ hàng}
-\subsection{Danh mục sản phẩm}
-\subsection{Chi tiết sản phẩm}
-\subsection{Thanh toán}
-\subsection{Địa chỉ, Liên hệ}
-\subsection{Xem lại lịch sử mua hàng}
+Các tính năng đảm bảo cho hệ thống có thể hoạt động được trọn vẹn kịch bản giao dịch mua - bán hàng.
+
+Trang chủ (Đăng kí, Đăng nhập)
+\begin{itemize}[leftmargin=2.2cm]
+\item Trang chủ:
+
+Hiển thị logo, banner quảng cáo, danh mục cà phê và snack, sản phẩm nổi bật, chương trình khuyến mãi và thanh điều hướng giúp khách hàng dễ dàng sử dụng website.
+\item Liên hệ:
+
+Cung cấp số điện thoại, email, mạng xã hội và biểu mẫu để khách hàng gửi câu hỏi, góp ý hoặc yêu cầu hỗ trợ.
+\item Địa chỉ cửa hàng:
+
+Hiển thị địa chỉ, giờ mở cửa và bản đồ Google Maps giúp khách hàng dễ dàng tìm kiếm và đến cửa hàng trực tiếp.
+\item Đăng ký: 
+
+Cho phép khách hàng tạo tài khoản bằng họ tên, email/số điện thoại và mật khẩu để sử dụng các tiện ích mua sắm.
+\item Đăng nhập:
+
+Cho phép khách hàng truy cập tài khoản cá nhân để quản lý thông tin, xem lịch sử mua hàng và theo dõi đơn hàng.
+\end{itemize}
+
+Giỏ hàng
+\begin{itemize}[leftmargin=2.2cm]
+\item Chức năng giỏ hàng cho phép người mua có thể xem số lượng sản phẩm mà mình đã chọn cũng như hiện 1 cửa sổ pop-up nhỏ khi di chuột vào để xem chi tiết sản phẩm mà mình đã thêm, ngoài ra còn thể hiện số tiền tổng
+\end{itemize}
+
+Danh mục sản phẩm
+\begin{itemize}[leftmargin=2.2cm]
+\item Là chức năng giúp phân loại thức uống thành các nhóm như cà phê, trà sữa, nước ép, sinh tố,... giúp khách hàng dễ dàng tìm kiếm và lựa chọn sản phẩm. Khi nhấn vào một danh mục, website sẽ hiển thị các sản phẩm tương ứng.
+\end{itemize}
+
+Chi tiết sản phẩm
+\begin{itemize}[leftmargin=2.2cm]
+\item Cung cấp thông tin cụ thể về từng thức uống như tên, hình ảnh, giá bán, thành phần, kích cỡ và các tùy chọn đi kèm. Khách hàng có thể lựa chọn số lượng, tùy chỉnh sản phẩm và thêm vào giỏ hàng.
+\end{itemize}
+
+Thanh toán
+\begin{itemize}[leftmargin=2.2cm]
+\item Chức năng thanh toán sẽ đưa người dùng vào trang thanh toán, ở đó có liệt kê chi tiết sản phẩm đã chọn ở giỏ hàng, giá của mỗi sản phầm và phần tổng tiền cần thanh toán, người mua có thể lựa chọn giữa trả trực tiếp khi nhận hàng hoặc thanh toán qua ví điện tử, chưa kể ở trang thanh toán có phần áp voucher để người mua có thể lựa chọn mã có hiệu lực để được giảm tiền
+\end{itemize}
+
+Chức năng tìm kiếm
+\begin{itemize}[leftmargin=2.2cm]
+\item Có thể tìm kiếm sản phẩm theo tên, loại sản phẩm và giá tiền
+\end{itemize}
+
 \section{Chức năng đặc trưng}
+Các chức năng đặc trưng phù hợp với lĩnh vực sản phẩm kinh doanh để gia tăng trải nghiệm người dùng.
+
+Hệ thống tích điểm
+\begin{itemize}[leftmargin=2.2cm]
+\item Khi khách hàng mua đồ sẽ được công thêm điểm vào kho điểm cá nhân, có thể dùng để đổi lấy sản phẩm miễn phí hoặc voucher giảm giá, đồng thời dựa trên số điểm và số tiền chi tiêu, bậc của tài khoản sẽ được nâng lên làm tăng tỉ lệ quy đổi điểm cùng với các đặc quyền khác.
+\end{itemize}
+
+Chọn nước ngẫu nhiên
+\begin{itemize}[leftmargin=2.2cm]
+\item Khi khách hàng không biết hoặc không rõ bản thân muốn uống hay mua món gì, cơ chế ngẫu nhiên giúp khách hàng có thể bỏ qua việc nghĩ ngợi và thưởng thức đồ uống 1 cách hoàn toàn ngẫu nhiên.
+\end{itemize}
+
+Tinh chỉnh sản phẩm
+\begin{itemize}[leftmargin=2.2cm]
+\item Lựa chọn kích Thước
+\item Lựa chọn độ ngọt
+\end{itemize}
 
 % Ngôn ngữ để viết và trình bày báo cáo khóa luận tốt nghiệp, đồ án tốt nghiệp, thực tập tốt nghiệp (sau đây gọi chung là báo cáo) là tiếng Việt hoặc tiếng Anh. Trường hợp chọn ngôn ngữ tiếng Anh để viết và trình bày báo cáo, sinh viên cần có đơn đề nghị, được cán bộ hướng dẫn (CBHD) đồng ý và nộp cho bộ phận Giáo vụ của Khoa vào thời điểm đăng ký đề tài để xin ý kiến. Báo cáo viết và trình bày bằng tiếng Anh phải có bản tóm tắt viết bằng tiếng Việt.
 
 %------------------------------- CHƯƠNG 2 ---------------------------------
 \chapter{Bảng phân công công việc}
+
+\begin{center}
+    {\Large \textbf{BẢNG PHÂN CÔNG CÔNG VIỆC}}\\[0.3cm]
+    {\normalsize Nhóm: \textbf{Nhóm 3} \quad -- \quad Đề tài: \textbf{GPTea Coffee Shop}}  % [SỬA] thông tin nhóm
+\end{center}
+
+\vspace{0.5cm}
+
+% [SỬA] Cột Công việc giảm còn 5.5cm để bảng không tràn lề; điền dữ liệu nhóm 3
+\begin{longtable}{|C{1cm}|C{3cm}|L{4.5cm}|L{5.5cm}|}
+    \hline
+    \textbf{STT} & \textbf{Mã số sinh viên} & \textbf{Họ và tên} & \textbf{Công việc} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{STT} & \textbf{Mã số sinh viên} & \textbf{Họ và tên} & \textbf{Công việc} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    1 & 26120234 & Lê Phi Long   & Chức năng tìm kiếm, Tinh chỉnh sản phẩm \\
+    \hline
+    2 & 26120428 & Nguyễn Trí    & Danh mục sản phẩm, Chi tiết sản phẩm \\
+    \hline
+    3 & 26120482 & Hà Văn Vương  & Hệ thống tích điểm, Chọn nước ngẫu nhiên \\
+    \hline
+    4 & 26120335 & Ngô Gia Phúc  & Giỏ hàng, Thanh toán \\
+    \hline
+    5 & 26120395 & Lê Quốc Thịnh & Trang chủ (Đăng kí, đăng nhập,...) \\
+    \hline
+\end{longtable}
 
 % \section{Quy định chung}
 % Báo cáo phải được trình bày ngắn gọn, rõ ràng, mạch lạc, sạch sẽ, không được tẩy xóa, có đánh số trang, đánh số bảng biểu, hình vẽ, đồ thị.
@@ -274,7 +374,9 @@ CHỨC NĂNG ĐẶC TRƯNG:
 % Nếu không có điều kiện tiếp cận được một tài liệu gốc mà phải trích dẫn thông qua một tài liệu khác thì phải nêu ra trích dẫn này, đồng thời tài liệu gốc đó không được liệt kê trong danh mục tài liệu tham khảo của báo cáo.
 
 %------------------------------- CHƯƠNG 3 ---------------------------------
-\chapter{Tài liệu tham khảo}
+% [SỬA] Đã tắt dòng dưới để mục lục không bị trùng "Tài liệu tham khảo"
+% (mục này đã được thêm ở phần thebibliography cuối file)
+% \chapter{Tài liệu tham khảo}
 
 % \section{Một số lời khuyên}
 
