@@ -5,10 +5,10 @@ header('Content-Type: application/json; charset=utf-8');
 // ==============================================================================
 // ĐIỀN THÔNG TIN TỪ INFINITYFREE VÀO 4 DÒNG DƯỚI ĐÂY:
 // ==============================================================================
-$db_host = 'sqlXXX.infinityfree.com'; // MySQL Hostname trên InfinityFree
-$db_name = 'if0_xxxx_gptea';          // MySQL Database Name
-$db_user = 'if0_xxxx';                // MySQL Username
-$db_pass = 'YOUR_INFINITYFREE_PASS';  // Mật khẩu Hosting InfinityFree
+$db_host = 'sql313.infinityfree.com'; // MySQL Hostname trên InfinityFree
+$db_name = 'if0_43345853_gptea';          // MySQL Database Name
+$db_user = 'if0_43345853';                // MySQL Username
+$db_pass = 'toibiaithaythe';  // Mật khẩu Hosting InfinityFree
 // ==============================================================================
 
 try {
