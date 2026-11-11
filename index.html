@@ -2,27 +2,61 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPTea | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPTea | Cửa hàng Trà Thảo Mộc & Coffee Shop</title>
+    <meta name="description" content="GPTea Coffee Shop - Trà thảo mộc, trà Ô long, trà hoa tự nhiên và đồ uống thủ công thơm ngon, tốt cho sức khỏe.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="theme1.css">
-    <script src="script.js"></script>
+    
+    <!-- Application Logic -->
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header / Thanh điều hướng chính -->
     <header>
-        <span class="logo" onclick="go('home')">🍃 GPTea Coffee Shop</span>
+        <span class="logo" onclick="go('home')" title="Trang chủ GPTea">🍃 GPTea Coffee Shop</span>
         <button data-v="home" onclick="go('home')">Trang chủ</button>
         <button data-v="catalog" onclick="go('catalog')">Sản phẩm</button>
         <button data-v="wish" onclick="go('wish')">♥ Yêu thích</button>
         <button data-v="contact" onclick="go('contact')">Liên hệ</button>
-        <button data-v="cart" onclick="go('cart')">🛒 Giỏ hàng <span class="badge" id="cc">0</span></button>
+        <button data-v="cart" id="cartNavBtn" onclick="go('cart')" title="Xem giỏ hàng">
+            🛒 Giỏ hàng <span class="badge" id="cc">0</span>
+        </button>
+        <button data-v="auth" id="authBtn" onclick="go('auth')">Đăng nhập</button>
         <button data-v="admin" id="adminBtn" onclick="go('admin')" hidden>Quản trị</button>
     </header>
     
-    <main id="app"></main>
+    <!-- Khu vực nội dung chính của ứng dụng -->
+    <main id="app">
+        <!-- Nội dung sẽ được render động thông qua script.js -->
+    </main>
     
-    <footer>GPTea · Glorious Production Tea Shop</footer>
+    <!-- Popup Modal Giỏ hàng -->
+    <div id="cartModalOverlay" class="modal-overlay" onclick="closeCartModal()">
+        <div class="cart-modal" onclick="event.stopPropagation()">
+            <div class="cart-modal-header">
+                <h3>Giỏ hàng của bạn</h3>
+                <button class="cart-modal-close" onclick="closeCartModal()" aria-label="Đóng popup giỏ hàng">&times;</button>
+            </div>
+            <div class="cart-modal-body" id="cartModalBody"></div>
+            <div class="cart-modal-footer" id="cartModalFooter"></div>
+        </div>
+    </div>
     
-    <div class="toast" id="toast" hidden></div>
+    <!-- Toast thông báo nhanh -->
+    <div class="toast" id="toast" hidden role="alert" aria-live="polite"></div>
+    
+    <!-- Footer trang web -->
+    <footer>
+        <p style="margin: 0 0 6px 0;">GPTea · Glorious Production Tea Shop & Coffee Lounge</p>
+        <p style="margin: 0; font-size: 12px; opacity: 0.8;">© 2026 GPTea. Hương vị thanh tao, trọn vẹn thiên nhiên.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,10 @@
+/.metadata/
+
+# Ignore all files in BCT1 and BCT2 except 3.pdf and 3.tex
+BCT1/*
+!BCT1/3.pdf
+!BCT1/3.tex
+
+BCT2/*
+!BCT2/3.pdf
+!BCT2/3.tex

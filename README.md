@@ -21,7 +21,7 @@
     Raw HTML, CSS, Javascript
 - Source Code Management: Github
 
-## 2. Project 2:  SuperSieuCap OCR
+## 2. Project 2: 
 
 ## 3. Teams 
 - 26120234 | Le Phi Long
@@ -30,15 +30,6 @@
 - 26120335 | Ngo Gia Phuc
 - 26120395 | Le Quoc Thinh
 - 26120xxx | xxx
-
-## 4. Progress Update
-### V1 (dd:mm:yyyy)
-#### Project1
--
--
-#### Project2
--
--
 
 ## 5. References
 
